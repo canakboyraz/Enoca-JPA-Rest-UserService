@@ -11,11 +11,11 @@ Program showing the name, surname, unit and company of the registered personnel.
 
 # Application Features:
 
- - Person Login
- - Person Save Service
- - Person Update Service
- - Person Delete Service
- - Person List Service
+
+ - Personel Save Service
+ - Personel Update Service
+ - Personel Delete Service
+ - Personel List Service
 
 # Project Display Image :
 
