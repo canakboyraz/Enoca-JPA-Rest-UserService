@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "d2d9e640-22cb-4330-81e0-711a8e840ea4",
+		"name": "Enoca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19333226"
+	},
+	"item": [
+		{
+			"name": "Person Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Burak\",\r\n    \"surname\":\"Akboyraz\",\r\n    \"department\":\"IT\",\r\n    \"personCompany\" : [\r\n            {\r\n                \"companyId\":1\r\n            }\r\n        ]\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/person/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"personId\":\"2\",\r\n    \"name\":\"Ayşenur\",\r\n    \"surname\":\"Akboyraz\",\r\n    \"department\":\"IT\",\r\n    \"personCompany\" : [\r\n            {\r\n                \"companyId\":1\r\n            }\r\n        ]\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/person/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/person/delete/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/person/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"person",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\":\"Enoca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/company/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"company",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personId\":2,\r\n    \"name\":\"Aysenur\",\r\n    \"surname\":\"Akboyraz\",\r\n    \"department\":\"IT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/company/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"company",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/company/delete/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"company",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/company/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"company",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Person List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/company/list/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"company",
+						"list",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company Person String List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n            {\r\n                \"companyName\":\"Enoca-SAP\"\r\n            }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/company/listPersonByCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"company",
+						"listPersonByCompany"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
